@@ -12,7 +12,7 @@ resource "aws_instance" "dev" {
     count = 3
     ami = "ami-07ebfd5b3428b6f4d"
     instance_type = var.instance_type
-    key_name = "var.key_name"
+    key_name = var.key_name
     tags = {
         Name = "dev${count.index}"
     }
@@ -22,7 +22,7 @@ resource "aws_instance" "dev" {
 resource "aws_instance" "dev4" {
     ami = "ami-07ebfd5b3428b6f4d"
     instance_type = var.instance_type
-    key_name = "var.key_name"
+    key_name = var.key_name
     tags = {
         Name = "dev4"
     }
